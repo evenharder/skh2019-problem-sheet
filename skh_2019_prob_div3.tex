@@ -1,0 +1,86 @@
+% !TeX document-id = {2743268b-f48d-42c5-84c1-63aa82af5f1a}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[11pt,a4paper,oneside,korean]{article}
+
+\usepackage{xetexko}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{olymp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{textcomp}
+\usepackage{framed}
+\usepackage{color} % for colored text
+\usepackage{import} % for changing current dir
+\usepackage{epigraph}
+\usepackage{daytime} % for displaying version number and date
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{verbatim}
+\usepackage{array} % compatibility check
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{enumitem} % for item environment line spacing
+\usepackage{skh2019}
+%\usepackage{hangulfontset}
+
+\graphicspath{{./images/}}
+\renewcommand{\baselinestretch}{1.4}
+\contest
+{2019 숭고한 연합 Algorithm Camp Contest - 초급반}%
+{숭실대학교}%
+{2019.08.09}%
+
+\newcommand*{\NoInputFileName}{}
+\newcommand*{\NoOutputFileName}{}
+
+\binoppenalty=10000
+\relpenalty=10000
+\exhyphenpenalty=10000
+
+%\setmainfont{Noto Sans}
+%\setmainhangulfont{Noto Sans CJK KR}
+%\setmonofont{D2Coding}
+
+\begin{document}
+    %\raggedbottom
+    %\displayauthorinfootertrue
+    %\intentionallyblankpagestrue
+    
+    \begin{titlepage}
+        \includepdf[pages=-, pagecommand={\thispagestyle{empty}}, offset=75 -75]{./cover/skh_2019_cover_div3.pdf}
+    \end{titlepage}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[height=0.12\textheight]{./logo-cropped.png}
+    \end{figure}
+    \skhintro
+    {
+    
+    \begin{table}[h]
+    \sffamily\Large
+    \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{cl}
+        A & 와글와글 숭고한 \\
+        B & 보너스 점수 \\
+        C & 이건 꼭 풀어야 해! \\
+        D & 무한부스터 \\
+        E & 우울한 방학 \\
+        F & 다이나믹 롤러 \\
+        G & 핑거 스냅 \\
+        \end{tabular}
+    \end{table}
+    }
+
+    \skhintroctd
+    
+    \newpage
+    
+    \import{"./problems/"}{novice-1-skh.tex}            % 와글와글 숭고한
+    \import{"./problems/"}{novice-2-score.tex}          % 보너스 점수
+    \import{"./problems/"}{begin-ps-must.tex}           % 이건 꼭 풀어야 해!
+    \import{"./problems/"}{begin-dp-booster.tex}        % 무한부스터
+    \import{"./problems/"}{free-begin-meeting.tex}      % 우울한 방학
+    \import{"./problems/"}{begin-lbound-roller.tex}     % 다이나믹 롤러
+    \import{"./problems/"}{begin-bfs-snap.tex}          % 핑거 스냅
+\end{document}

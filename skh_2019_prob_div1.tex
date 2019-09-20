@@ -1,0 +1,86 @@
+% !TeX document-id = {4e960c07-e46e-4098-a7a9-0ce279759885}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[11pt,a4paper,oneside,korean]{article}
+
+\usepackage{xetexko}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{olymp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{textcomp}
+\usepackage{framed}
+\usepackage{color} % for colored text
+\usepackage{import} % for changing current dir
+\usepackage{epigraph}
+\usepackage{daytime} % for displaying version number and date
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{verbatim}
+\usepackage{array} % compatibility check
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{enumitem} % for item environment line spacing
+\usepackage{skh2019}
+%\usepackage{hangulfontset}
+
+\graphicspath{{./images/}}
+\renewcommand{\baselinestretch}{1.4}
+\contest
+{2019 숭고한 연합 Algorithm Camp Contest - 고급반}%
+{숭실대학교}%
+{2019.08.09}%
+
+\newcommand*{\NoInputFileName}{}
+\newcommand*{\NoOutputFileName}{}
+
+\binoppenalty=10000
+\relpenalty=10000
+\exhyphenpenalty=10000
+
+%\setmainfont{Noto Sans}
+%\setmainhangulfont{Noto Sans CJK KR}
+%\setmonofont{D2Coding}
+
+\begin{document}
+    %\raggedbottom
+    %\displayauthorinfootertrue
+    %\intentionallyblankpagestrue
+    
+    \begin{titlepage}
+        \includepdf[pages=-, pagecommand={\thispagestyle{empty}}, offset=75 -75]{./cover/skh_2019_cover_div1.pdf}
+    \end{titlepage}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[height=0.12\textheight]{./logo-cropped.png}
+    \end{figure}
+    \skhintro
+    {
+    
+    \begin{table}[h]
+    \sffamily\Large
+    \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{cl}
+        A & 이진수 변환 \\
+        B & 백도어 \\
+        C & 깃발춤 \\
+        D & 일하는 세포 \\
+        E & 트리의 외심 \\
+        F & 시간 끌기 \\
+        G & 가장 높고 넓은 성 \\
+        \end{tabular}
+    \end{table}
+    }
+
+    \skhintroctd
+    
+    \newpage
+    
+    \import{"./problems/"}{free-inter-binary.tex}       % 이진수 변환
+    \import{"./problems/"}{inter-dist-backdoor.tex}     % 백도어
+    \import{"./problems/"}{adv-segtree-flag.tex}        % 깃발춤
+    \import{"./problems/"}{adv-dp-cell.tex}             % 일하는 세포
+    \import{"./problems/"}{inter-lca-center.tex}        % 트리의 외심
+    \import{"./problems/"}{adv-flow-delay.tex}          % 시간 끌기
+    \import{"./problems/"}{adv-geo-castle.tex}          % 가장 높고 넓은 성
+\end{document}
